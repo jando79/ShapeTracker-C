@@ -1,5 +1,6 @@
 using System;
 using ShapeTracker.Models;
+using System.Collections.Generic;
 
 namespace ShapeTracker
 {
@@ -64,12 +65,18 @@ namespace ShapeTracker
       if (userResponse == "new" || userResponse == "New")
       {
         Main();
+      } else if (userResponse == "all"|| userResponse == "All") // added for GetAll()
+      {
+        List<Triangle> listAll = Triangle.GetAll();
+        foreach(Triangle item in listAll)
+        {
+          Console.WriteLine(item);
+        }
       }
       else
       {
         Console.WriteLine("Goodbye!");
       }
     }
-    
   }
 }
