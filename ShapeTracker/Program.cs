@@ -70,5 +70,6 @@ namespace ShapeTracker
         Console.WriteLine("Goodbye!");
       }
     }
+    
   }
 }
